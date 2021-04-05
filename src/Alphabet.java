@@ -1,3 +1,5 @@
+import jdk.jfr.Unsigned;
+
 import java.util.Arrays;
 import java.util.Set;
 import java.util.TreeSet;
@@ -13,4 +15,10 @@ public class Alphabet {
         this.set = new TreeSet(Arrays.asList(chars));
     }
 
+    public Alphabet (Integer... ints) {
+        for (Integer i : ints) {
+            i.toString().charAt(0);
+        }
+        this.set = new TreeSet(Arrays.asList(ints));
+    }
 }
