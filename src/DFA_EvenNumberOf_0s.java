@@ -7,9 +7,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class DFA_MultiplesOf_3 {
+public class DFA_EvenNumberOf_0s {
     public static Integer move(Integer state, Character letter) {
-        return (3 - state + Character.getNumericValue(letter)) % 3;
+        return state == Character.getNumericValue(letter) ? 1 : 0;
     }
 
     public static void imSorry(String... song) throws URISyntaxException, IOException {
@@ -20,7 +20,7 @@ public class DFA_MultiplesOf_3 {
 
     public static void main(String[] args) throws Exception {
         DFA dfa = new DFA(
-                new ArrayList<Integer>(Arrays.asList(0, 1, 2)),
+                new ArrayList<Integer>(Arrays.asList(0, 1)),
                 new ArrayList<Character>(Arrays.asList('0', '1')),
                 0,
                 new ArrayList<Integer>(Arrays.asList(0))
