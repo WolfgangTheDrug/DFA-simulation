@@ -13,23 +13,14 @@ public class State {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
-    public Boolean getStartState() {
+    public Boolean isStartState() {
         return isStartState;
     }
 
-    public void setStartState(Boolean startState) {
-        isStartState = startState;
-    }
 
-    public Boolean getAcceptState() {
+    public Boolean isAcceptState() {
         return isAcceptState;
     }
 
-    public void setAcceptState(Boolean acceptState) {
-        isAcceptState = acceptState;
-    }
 }
