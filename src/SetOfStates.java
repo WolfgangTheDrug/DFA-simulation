@@ -1,21 +1,19 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 public class SetOfStates {
     private State start;
-    private List<State> intermediateStates;
-    private List<State> acceptStates;
+    private Set<State> intermediateStates;
+    private Set<State> acceptStates;
 
-    public SetOfStates(State start, List<State> intermediateStates, List<State> acceptStates) {
+    public SetOfStates(State start, Set<State> intermediateStates, Set<State> acceptStates) {
         this.start = start;
-        this.intermediateStates = new ArrayList<>(intermediateStates);
-        this.acceptStates = new ArrayList<>(acceptStates);
+        this.intermediateStates = new HashSet<>(intermediateStates);
+        this.acceptStates = new HashSet<>(acceptStates);
     }
 
     public SetOfStates (State... states) {
-        this.intermediateStates = new ArrayList<State>();
-        this.acceptStates = new ArrayList<State>();
+        this.intermediateStates = new HashSet<>();
+        this.acceptStates = new HashSet<>();
         for (State s : states) {
             if(!s.isStartState() && !s.isAcceptState()) this.intermediateStates.add(s);
             else {
